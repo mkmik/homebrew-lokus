@@ -5,20 +5,20 @@
 class Lokus < Formula
   desc ""
   homepage "https://github.com/mkmik/lokus"
-  version "0.0.2"
+  version "0.0.3"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/mkmik/lokus/releases/download/v0.0.2/lokus_0.0.2_darwin_amd64.tar.gz"
-      sha256 "9543c0a818ef571447b40f527bd759d71456800ce5206c9263585dd44a1637f1"
+    if Hardware::CPU.arm?
+      url "https://github.com/mkmik/lokus/releases/download/v0.0.3/lokus_0.0.3_darwin_arm64.tar.gz"
+      sha256 "83e5a00d5a5d5b326b9604b037d7a5b7a60904993784b2588d7f92e45f8fdabc"
 
       def install
         bin.install "lokus"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/mkmik/lokus/releases/download/v0.0.2/lokus_0.0.2_darwin_arm64.tar.gz"
-      sha256 "b10aeb0bb03ebaaaa49ebd902fa3b1549700657b906f922ccae8337a5fd4548f"
+    if Hardware::CPU.intel?
+      url "https://github.com/mkmik/lokus/releases/download/v0.0.3/lokus_0.0.3_darwin_amd64.tar.gz"
+      sha256 "f2cd629e94028a0ebe857864a0b5c694e204d73ac971346ae969b04722c0b5cf"
 
       def install
         bin.install "lokus"
@@ -28,16 +28,16 @@ class Lokus < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mkmik/lokus/releases/download/v0.0.2/lokus_0.0.2_linux_arm64.tar.gz"
-      sha256 "3351bb118bb1d77dc3d245f187bfafaf9f48ccb7cdf4a922f87d6f13dfb7ec2c"
+      url "https://github.com/mkmik/lokus/releases/download/v0.0.3/lokus_0.0.3_linux_arm64.tar.gz"
+      sha256 "277e6cb0130869263a84bcb536c0666727cb0115055cf0bfde429134a1530506"
 
       def install
         bin.install "lokus"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mkmik/lokus/releases/download/v0.0.2/lokus_0.0.2_linux_amd64.tar.gz"
-      sha256 "6f590f869b9c97d0e78d13b3de93ce9c26ceec0fc5e811f62de02899e7b5e895"
+      url "https://github.com/mkmik/lokus/releases/download/v0.0.3/lokus_0.0.3_linux_amd64.tar.gz"
+      sha256 "0634b58bc834e5feb30088cc3e114a76c70b1be455cd4617f5875812418b6fc7"
 
       def install
         bin.install "lokus"
