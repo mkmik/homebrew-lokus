@@ -5,20 +5,20 @@
 class Lokus < Formula
   desc ""
   homepage "https://github.com/mkmik/lokus"
-  version "0.0.3"
+  version "0.1.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/mkmik/lokus/releases/download/v0.0.3/lokus_0.0.3_darwin_arm64.tar.gz"
-      sha256 "83e5a00d5a5d5b326b9604b037d7a5b7a60904993784b2588d7f92e45f8fdabc"
+      url "https://github.com/mkmik/lokus/releases/download/v0.1.0/lokus_0.1.0_darwin_arm64.tar.gz"
+      sha256 "406b13980148e83704a896e845995f789d6761c5c5dca1fe94140622bf605902"
 
       def install
         bin.install "lokus"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mkmik/lokus/releases/download/v0.0.3/lokus_0.0.3_darwin_amd64.tar.gz"
-      sha256 "f2cd629e94028a0ebe857864a0b5c694e204d73ac971346ae969b04722c0b5cf"
+      url "https://github.com/mkmik/lokus/releases/download/v0.1.0/lokus_0.1.0_darwin_amd64.tar.gz"
+      sha256 "ff3a1fd00c6004761941a13c0063a81d884ddbd4d13ab643f49a2c70a4a0b4a5"
 
       def install
         bin.install "lokus"
@@ -28,16 +28,16 @@ class Lokus < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mkmik/lokus/releases/download/v0.0.3/lokus_0.0.3_linux_arm64.tar.gz"
-      sha256 "277e6cb0130869263a84bcb536c0666727cb0115055cf0bfde429134a1530506"
+      url "https://github.com/mkmik/lokus/releases/download/v0.1.0/lokus_0.1.0_linux_arm64.tar.gz"
+      sha256 "855b12edaa07d33488dd364de408f3f0ec9be9398811a7421cee65498f3b93b0"
 
       def install
         bin.install "lokus"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mkmik/lokus/releases/download/v0.0.3/lokus_0.0.3_linux_amd64.tar.gz"
-      sha256 "0634b58bc834e5feb30088cc3e114a76c70b1be455cd4617f5875812418b6fc7"
+      url "https://github.com/mkmik/lokus/releases/download/v0.1.0/lokus_0.1.0_linux_amd64.tar.gz"
+      sha256 "b77565046b1812ecce9c8282e0a6d4e6c2000643dd9d8b1f8c82f074326912ec"
 
       def install
         bin.install "lokus"
